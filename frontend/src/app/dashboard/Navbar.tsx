@@ -6,7 +6,7 @@ function Navbar() {
     <nav className="navbar">
     
       <div className="navbar_container">
-        <li><Link href="/" id="navbar_logo" passHref>BodyCam</Link></li>
+        <Link href="/" id="navbar_logo" passHref>BodyCam</Link>
         <div className="navbar_toggle" id="mobile-menu">
           <span className="bar"></span>
           <span className="bar"></span>
