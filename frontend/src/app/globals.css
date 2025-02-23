@@ -638,3 +638,73 @@ footer_link-items > h2 {
         width: 100%;
     }
 }
+
+/*
+/* globals.css */
+body {
+  background-color: black;
+  color: white;
+  font-family: "Arial", sans-serif;
+  padding: 20px;
+}
+
+/* Page Title */
+.page-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #00f2ff;
+  margin-bottom: 20px;
+}
+
+/* Complaint Table */
+.complaints-container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  background-color: #111;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px #00f2ff;
+}
+
+/* Table Header */
+.complaints-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  background-color: #222;
+  padding: 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: #00f2ff;
+}
+
+/* Complaint Row */
+.complaint-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 0;
+  border-bottom: 1px solid #00f2ff;
+  transition: 0.3s;
+}
+
+/* Alternate Row Color */
+.complaint-row:nth-child(odd) {
+  background-color: #1a1a1a;
+}
+
+/* Hover Effect */
+.complaint-row:hover {
+  background-color: #00f2ff;
+  color: black;
+  font-weight: bold;
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
