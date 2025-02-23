@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { supabase } from "@/lib/supabase";
 import { useRouter } from "next/navigation";
+import Link from 'next/link';
 
 
 export default function AuthPage() {
@@ -47,8 +48,14 @@ export default function AuthPage() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button onClick={handleSignUp}>Sign Up</button>
-          <button onClick={handleSignIn}>Login</button>
+          <button className="login-button" onClick={handleSignUp}>Sign Up</button>
+          <button className="login-button" onClick={handleSignIn}>Login</button>
+          <Link href="/submitComplaint" passHref>
+            <button className="complaint-button" style={{ textDecoration: "none" }}>
+                Submit a Complaint
+            </button>
+            </Link>
+
         </div>
       </section>
 
