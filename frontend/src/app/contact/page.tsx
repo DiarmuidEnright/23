@@ -1,11 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Navbar from "../dashboard/Navbar";
 
 function ContactPage() {
   return (
     <div>
       {/* Main Container */}
+      <Navbar/>
       <div className="main">
         <div className="main_container">
           <div className="main_content">

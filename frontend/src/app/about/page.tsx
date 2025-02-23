@@ -1,15 +1,17 @@
 import Link from 'next/link';
 import React from 'react';
+import Navbar from '../dashboard/Navbar';
 
 function AboutPage() {
   return (
     <div>
+      <Navbar/>
       <div className="main">
         <div className="main_container">
           <div className="main_content">
             <h1>About Us</h1>
             <p>Learn all about our goals!</p>
-          </div>
+          </div>  
           <div className="main_img--container">
             <img src="images/23.jpg" alt="images/23.jpg" id="main_img" />
           </div>

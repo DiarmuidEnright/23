@@ -99,7 +99,7 @@ function MapView() {
             <h3>BodyCam footage</h3>
             <hr />
             <video width="100%" height="215" controls>
-              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+              <source src="https://s3.filebin.net/filebin/86e91768be58c8d424ed935bd496f67663624ad890000f6c115e96d46669e5c6/f4ee84b3108a7ffa2fa8e01401d89c57dedb0c2672eccf547e59104108e5731c?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=7pMj6hGeoKewqmMQILjm%2F20250223%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250223T113737Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&response-cache-control=max-age%3D60&response-content-disposition=filename%3D%22video_trimmed.mp4%22&response-content-type=video%2Fmp4&X-Amz-Signature=62c228053128668daca1d14dd7a75ea0389456e31e052ef5978bae089015d028" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <p>{description}</p>
