@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
+
 :root {
   --background-color: #000;
   --text-color: #fff;
   --accent-color: #00f2ff;
-  --font-family: 'Arial', sans-serif;
+  --font-family: 'Kanit', Serif;
 }
 
 html, body {
@@ -131,12 +133,6 @@ html, body {
 
 
 /*Amelia's CSS*/
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Kanit', Serif;
-}
 
 .navbar {
   background: #000000;

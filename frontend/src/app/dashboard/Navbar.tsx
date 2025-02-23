@@ -4,6 +4,7 @@ import Link from 'next/link';
 function Navbar() {
   return (
     <nav className="navbar">
+    
       <div className="navbar_container">
         <li><Link href="/" id="navbar_logo" passHref>BodyCam</Link></li>
         <div className="navbar_toggle" id="mobile-menu">
@@ -19,6 +20,7 @@ function Navbar() {
         <li className="navbar_btn"><Link href="/auth" className="button" passHref>Sign Out</Link></li>
       </ul>
     </nav>
+    
   );
 }
 
