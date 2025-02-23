@@ -5,12 +5,13 @@ import { MapContainer, TileLayer, Marker, Popup, Circle } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L, { Icon } from 'leaflet';
 import customIcon from './custom-marker.png';
+import FetchData from '@/fetchData';
 
 
 function MapView() {
   const [position2, setPosition3] = useState<[number, number]>([-0.20, 40]);
   const [position, setPosition1] = useState<[number, number]>([51.505, -0.09]);
-  const [position1, setPosition2] = useState<[number, number]>([45, 60]);
+  const [position1, setPosition2] = useState<[number, number]>([53.3492832, -6.2476664]);
   const markerRef = useRef<any>(null);
 
   const myIcon: Icon = new L.Icon({
@@ -43,7 +44,14 @@ function MapView() {
         center={position}
         zoom={13}
         scrollWheelZoom={true}
-        style={{ height: '120vh', width: '120%' }}
+        style={{ height: '100vh', width: '120%' }}
+        maxBounds={[
+          [-90, -180], // Southwest coordinates
+          [90, 180],   // Northeast coordinates
+        ]}
+        minZoom={2}   // Prevents zooming out too far
+        maxZoom={18}
+        maxBoundsViscosity={1.0} 
       >
 
 
@@ -85,7 +93,7 @@ function MapView() {
               <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <p>{description}</p>
+            <p>DogPatch Labs</p>
             📍 Location: <strong>{position1[0]}, {position1[1]}</strong>
           </Popup>
         </Marker>
@@ -98,11 +106,8 @@ function MapView() {
           <Popup maxWidth={400}>
             <h3>BodyCam footage</h3>
             <hr />
-            <video width="100%" height="215" controls>
-              <source src="https://s3.filebin.net/filebin/86e91768be58c8d424ed935bd496f67663624ad890000f6c115e96d46669e5c6/f4ee84b3108a7ffa2fa8e01401d89c57dedb0c2672eccf547e59104108e5731c?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=7pMj6hGeoKewqmMQILjm%2F20250223%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250223T113737Z&X-Amz-Expires=60&X-Amz-SignedHeaders=host&response-cache-control=max-age%3D60&response-content-disposition=filename%3D%22video_trimmed.mp4%22&response-content-type=video%2Fmp4&X-Amz-Signature=62c228053128668daca1d14dd7a75ea0389456e31e052ef5978bae089015d028" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <p>{description}</p>
+            <iframe width="400" height="250" src="https://www.youtube.com/embed/hICeE4PKEYg?si=HaPrhrdTrsE54Dri" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+            <FetchData/>
             📍 Location: <strong>{position2[0]}, {position2[1]}</strong>
           </Popup>
         </Marker>

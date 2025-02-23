@@ -153,6 +153,7 @@ html, body {
   top: 0;
   z-index: 999;
   box-shadow: 0px 4px #00000080;
+  margin-left: 47px;
 }
 
 .navbar_container {
