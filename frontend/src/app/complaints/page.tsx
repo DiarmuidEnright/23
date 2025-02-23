@@ -1,8 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { createClient } from "@supabase/supabase-js";
+import Navbar from '../dashboard/Navbar';
 
-// Supabase configuration
+// Supabase Configuration
 const supabase = createClient(
   "https://evxchpvtxienefjtcbhs.supabase.co",
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV2eGNocHZ0eGllbmVmanRjYmhzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDAyNDUzMTMsImV4cCI6MjA1NTgyMTMxM30.AT95PWkDSPUBQAQCmE1VZrhIltvOuj4moE34pRs3OVw"
@@ -34,28 +35,32 @@ const ComplaintsPage = () => {
 
   return (
     <div className="complaints-container">
+      <Navbar />;
       <h1 className="page-title">Live Complaints</h1>
       {error && <p className="error-message">{error}</p>}
 
-      <div className="complaints-table">
-        <div className="complaints-header">
-          <span>ID</span>
-          <span>Name</span>
-          <span>Country</span>
-          <span>City</span>
-          <span>Description</span>
-        </div>
-
-        {complaints.map((complaint) => (
-          <div key={complaint.id} className="complaint-row">
-            <span>{complaint.id}</span>
-            <span>{complaint.full_name}</span>
-            <span>{complaint.country}</span>
-            <span>{complaint.city}</span>
-            <span>{complaint.summary}</span>
-          </div>
-        ))}
-      </div>
+      <table className="complaints-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Country</th>
+            <th>City</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          {complaints.map((complaint) => (
+            <tr key={complaint.id}>
+              <td>{complaint.id}</td>
+              <td>{complaint.full_name}</td>
+              <td>{complaint.country}</td>
+              <td>{complaint.city}</td>
+              <td>{complaint.summary}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };

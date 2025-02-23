@@ -639,72 +639,58 @@ footer_link-items > h2 {
     }
 }
 
-/*
-/* globals.css */
-body {
-  background-color: black;
-  color: white;
-  font-family: "Arial", sans-serif;
-  padding: 20px;
-}
-
-/* Page Title */
-.page-title {
-  text-align: center;
-  font-size: 2rem;
-  color: #00f2ff;
-  margin-bottom: 20px;
-}
-
-/* Complaint Table */
-.complaints-container {
-  width: 90%;
-  max-width: 1000px;
-  margin: auto;
-  padding: 20px;
-  background-color: #111;
-  border-radius: 8px;
-  box-shadow: 0px 0px 10px #00f2ff;
-}
-
-/* Table Header */
-.complaints-header {
-  display: flex;
-  justify-content: space-between;
-  font-weight: bold;
+/* Table Styling */
+.complaints-table {
+  width: 100%;
+  border-collapse: collapse;
   background-color: #222;
-  padding: 10px;
-  border-radius: 5px;
-  text-transform: uppercase;
-  color: #00f2ff;
+  border-radius: 8px;
+  overflow: hidden;
+  table-layout: fixed; /* Ensures equal column widths */
 }
 
-/* Complaint Row */
-.complaint-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  margin: 5px 0;
-  border-bottom: 1px solid #00f2ff;
-  transition: 0.3s;
+/* Header Row */
+.complaints-table thead {
+  background-color: black;
+  color: #00f2ff;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+/* Make columns evenly spaced */
+.complaints-table th, .complaints-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 3px solid #00f2ff;
+  text-shadow: 0px 0px 10px #00f2ff;
+  width: 20%; /* Distribute space equally */
+  word-wrap: break-word; /* Prevents text from overflowing */
+}
+
+/* Wider description column */
+.complaints-table td:last-child, 
+.complaints-table th:last-child {
+  width: 35%;
+}
+
+/* Space out rows */
+.complaints-table tr {
+  height: 50px; /* Increase row height */
 }
 
 /* Alternate Row Color */
-.complaint-row:nth-child(odd) {
+.complaints-table tr:nth-child(odd) {
   background-color: #1a1a1a;
 }
 
 /* Hover Effect */
-.complaint-row:hover {
+.complaints-table tr:hover {
   background-color: #00f2ff;
   color: black;
   font-weight: bold;
+  transition: 0.3s ease-in-out;
 }
 
-/* Error Message */
-.error-message {
-  color: red;
-  text-align: center;
-  margin-top: 10px;
+.page-title {
+  margin: 20px;
 }

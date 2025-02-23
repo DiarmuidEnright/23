@@ -15,6 +15,7 @@ function Navbar() {
       </div>
       <ul className="navbar_menu">
         <li className="navbar_item"><Link href="/dashboard" className="navbar_links" passHref>Home</Link></li>
+        <li className="navbar_item"><Link href="/complaints" className="navbar_links" passHref>Complaints</Link></li>
         <li className="navbar_item"><Link href="/about" className="navbar_links" passHref>About</Link></li>
         <li className="navbar_item"><Link href="/contact" className="navbar_links" passHref>Contact Us</Link></li>
         <li className="navbar_btn"><Link href="/auth" className="button" passHref>Sign Out</Link></li>
