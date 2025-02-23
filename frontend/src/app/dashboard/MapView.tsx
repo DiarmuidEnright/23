@@ -8,9 +8,9 @@ import customIcon from './custom-marker.png';
 
 
 function MapView() {
-  const [position2, setPosition3] = useState<[number, number]>([51.505, -0.09]);
-  const [position, setPosition1] = useState<[number, number]>([45, 60]);
-  const [position1, setPosition2] = useState<[number, number]>([30, 20]);
+  const [position2, setPosition3] = useState<[number, number]>([-0.20, 40]);
+  const [position, setPosition1] = useState<[number, number]>([51.505, -0.09]);
+  const [position1, setPosition2] = useState<[number, number]>([45, 60]);
   const markerRef = useRef<any>(null);
 
   const myIcon: Icon = new L.Icon({
